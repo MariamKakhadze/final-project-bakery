@@ -1,0 +1,409 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff8f2;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1312px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+* {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+}
+
+body {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+h1,
+.page-title {
+  font-size: 26px;
+  letter-spacing: 0.06em;
+}
+@media (min-width: 1024px) {
+  h1,
+  .page-title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+}
+
+h2,
+.section-title {
+  font-size: 26px;
+  letter-spacing: 0.06em;
+}
+@media (min-width: 1024px) {
+  h2,
+  .section-title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+}
+
+h3,
+.card-title {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+@media (min-width: 1024px) {
+  h3,
+  .card-title {
+    font-size: 24px;
+  }
+}
+
+p {
+  color: #656565;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (min-width: 1024px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+small,
+.text-small {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.text-muted {
+  color: #656565;
+}
+
+.text-light {
+  color: #888383;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nav-text {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.button-text {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+@media (min-width: 1024px) {
+  .button-text {
+    font-size: 24px;
+  }
+}
+
+input,
+textarea,
+select {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888383;
+  opacity: 1;
+}
+
+button {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+}
+
+.header {
+  background-color: #F3D2B6;
+  position: relative;
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  width: 110px;
+  height: auto;
+}
+
+.header__burger {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #3E2723;
+  cursor: pointer;
+}
+
+.header__burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.header--menu-open .header__burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header--menu-open .header__burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.header--menu-open .header__burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  color: #3E2723;
+  cursor: pointer;
+}
+
+.header__action img {
+  width: 28px;
+  height: 28px;
+}
+
+.header__nav {
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 16px;
+  background-color: #F3D2B6;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.header--menu-open .header__nav {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.header__nav-link {
+  position: relative;
+  display: inline-flex;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header__nav-item--active .header__nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background-color: #3E2723;
+}
+
+@media (min-width: 1024px) {
+  .header__inner {
+    min-height: 128px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 120px;
+    padding-block: 0.5rem;
+  }
+  .header__logo img {
+    width: 158px;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__nav {
+    position: static;
+    inset: auto;
+    z-index: auto;
+    display: block;
+    width: auto;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    overflow: visible;
+  }
+  .header__nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header__nav-link {
+    font-size: 20px;
+  }
+  .header__actions {
+    gap: 3rem;
+  }
+  .header__action {
+    width: 36px;
+    height: 36px;
+  }
+  .header__action img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__inner {
+    gap: 304px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

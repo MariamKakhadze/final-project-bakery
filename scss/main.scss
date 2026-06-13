@@ -1,20 +1,15 @@
-// Abstract (Variables & Mixins must come first)
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'abstracts' as *;
 
-// Base
-@import 'base/reset';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/typography';
 
-// Components
-@import 'components/navbar';
-@import 'components/footer';
-@import 'components/button';
-@import 'components/card';
+@use 'components/navbar';
+@use 'components/footer';
+@use 'components/button';
+@use 'components/card';
 
-// Pages
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/menu';
-@import 'pages/cart';
-@import 'pages/checkout';
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/menu';
+@use 'pages/cart';
+@use 'pages/checkout';

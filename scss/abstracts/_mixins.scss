@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin mobile {
     @media (min-width: $breakpoint-mobile) {
         @content;
@@ -5,7 +7,7 @@
 }
 
 @mixin desktop {
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: 1024px) {
         @content;
     }
 }
@@ -15,3 +17,4 @@
         @content;
     }
 }
+
