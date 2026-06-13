@@ -229,6 +229,13 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .header__inner {
+    gap: 3rem;
+  }
+}
+.header__inner {
   padding-block: 0.75rem;
 }
 
@@ -403,6 +410,177 @@ body.nav-open {
 @media (min-width: 1440px) {
   .header__inner {
     gap: 304px;
+  }
+}
+.footer {
+  background-color: #F3D2B6;
+  color: #3E2723;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 0.5rem 3rem;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 251px;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer__nav,
+.footer__contact,
+.footer__social {
+  width: 100%;
+  max-width: 227px;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer__nav-link {
+  color: #100f0f;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+.footer__nav-link:hover, .footer__nav-link:focus-visible {
+  color: #2f1d1a;
+}
+
+.footer__heading {
+  color: #100f0f;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__contact-list,
+.footer__social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__contact-item,
+.footer__social-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__social-item {
+  gap: 6px;
+}
+
+.footer__contact-item img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__social-item img {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.footer__contact-item a,
+.footer__contact-item span,
+.footer__social-item a {
+  color: #656565;
+  font-size: 16px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.footer__contact-item a,
+.footer__contact-item span {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+}
+
+.footer__social-item a {
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+}
+
+.footer__contact-item a:hover,
+.footer__contact-item a:focus-visible,
+.footer__social-item a:hover,
+.footer__social-item a:focus-visible {
+  color: #3E2723;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 97px;
+    min-height: 260px;
+    padding-block: 51px 47px;
+  }
+  .footer__logo {
+    width: 297px;
+    max-width: none;
+    margin-right: 84px;
+  }
+  .footer__logo img {
+    width: 297px;
+  }
+  .footer__nav,
+  .footer__contact,
+  .footer__social {
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+    text-align: left;
+  }
+  .footer__nav {
+    width: 147px;
+  }
+  .footer__contact {
+    width: 224px;
+  }
+  .footer__social {
+    width: 216px;
+  }
+  .footer__heading {
+    font-size: 24px;
+  }
+  .footer__nav-list {
+    align-items: flex-start;
+  }
+  .footer__nav-link {
+    text-align: left;
   }
 }
 
