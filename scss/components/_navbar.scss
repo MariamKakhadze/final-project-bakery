@@ -12,6 +12,9 @@
     align-items: center;
     justify-content: space-between;
     gap: $spacing-4;
+    @include desktop {
+        gap: $spacing-12;
+    }
     padding-block: $spacing-3;
 }
 
