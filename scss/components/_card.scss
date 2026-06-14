@@ -1,0 +1,214 @@
+@use '../abstracts' as *;
+
+// Products section
+.products {
+    padding-block: $spacing-10 $spacing-16;
+}
+
+.products__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-8;
+}
+
+.products__title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: $line-height-tight;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.products__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-6;
+    width: 100%;
+}
+
+.products__item {
+    width: 100%;
+    max-width: 358px;
+    margin-inline: auto;
+}
+
+// Product card
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6;
+    width: 100%;
+    padding: $spacing-2;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.product-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 158px;
+    padding: 20px 55px 19px;
+    background-color: $color-secondary;
+    border-radius: 20px;
+}
+
+.product-card__media img {
+    width: 100%;
+    max-width: 219px;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    width: 100%;
+    padding-inline: $spacing-2;
+    padding-bottom: $spacing-1;
+}
+
+.product-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-4;
+    width: 100%;
+}
+
+.product-card__name {
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    font-weight: 400;
+    line-height: $line-height-tight;
+}
+
+.product-card__price {
+    flex-shrink: 0;
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    font-weight: 400;
+    line-height: $line-height-tight;
+}
+
+.product-card__description {
+    color: $color-text-light;
+    font-family: $font-main;
+    font-size: $font-size-xs;
+    line-height: $line-height-base;
+}
+
+.product-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+}
+
+// Quantity control
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.quantity__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.quantity__btn img {
+    width: 38px;
+    height: 38px;
+}
+
+.quantity__value {
+    min-width: 1ch;
+    color: $color-primary;
+    font-family: $font-body;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    line-height: $line-height-tight;
+    text-align: center;
+}
+
+@include desktop {
+    .products {
+        padding-block: $spacing-16 $spacing-20;
+    }
+
+    .products__title {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+
+    .products__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        max-width: 1313px;
+    }
+
+    .products__grid--menu {
+        row-gap: 24px;
+    }
+
+    .products__item {
+        max-width: none;
+        margin-inline: 0;
+    }
+
+    .product-card {
+        min-height: 439px;
+        border-radius: $radius-md;
+    }
+
+    .product-card__media {
+        min-height: 236px;
+        padding: 33px 48px;
+        border-radius: $radius-md;
+    }
+
+    .product-card__media img {
+        max-width: 312px;
+        max-height: 170px;
+    }
+
+    .product-card__body {
+        gap: $spacing-6;
+        padding-inline: 0;
+    }
+
+    .product-card__name,
+    .product-card__price {
+        font-size: $font-size-xl;
+    }
+
+    .product-card__description {
+        font-size: $font-size-sm;
+    }
+
+    .product-card__footer {
+        justify-content: space-between;
+        gap: 92px;
+    }
+
+    .quantity {
+        gap: 17px;
+    }
+}

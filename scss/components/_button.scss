@@ -1,0 +1,157 @@
+@use '../abstracts' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border: 0;
+    font-family: $font-main;
+    font-weight: 400;
+    line-height: $line-height-tight;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// Primary — hero, forms, cart checkout, about CTA
+.btn--primary {
+    min-height: 54px;
+    padding: $spacing-2;
+    border-radius: $radius-md;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: $font-size-sm;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-primary-hover;
+    }
+}
+
+// Secondary — payment address change
+.btn--secondary {
+    min-height: 55px;
+    padding: $spacing-2 $spacing-6;
+    border-radius: 20px;
+    background-color: $color-primary;
+    color: #fdfdfd;
+    font-size: $font-size-sm;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-primary-hover;
+    }
+}
+
+// Product card buy button
+.btn--buy {
+    gap: 14px;
+    flex-shrink: 0;
+    width: 192px;
+    min-height: 50px;
+    padding: 13px 39px;
+    border-radius: 24.5px;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: $font-size-sm;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-primary-hover;
+    }
+}
+
+// Google sign-in
+.btn--google {
+    gap: $spacing-2;
+    width: 100%;
+    min-height: 54px;
+    padding: $spacing-4 $spacing-2;
+    border: 1px solid #e6e8e7;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 3%);
+    color: #232323;
+    font-size: $font-size-md;
+    letter-spacing: -0.01em;
+
+    img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: #d8dad9;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 6%);
+    }
+}
+
+// Page-specific primary buttons
+.hero__btn,
+.about__btn {
+    width: 100%;
+    max-width: 311px;
+}
+
+.auth__submit,
+.contact__submit,
+.payment-form__submit {
+    width: 100%;
+}
+
+.cart-drawer__checkout {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 39px;
+    border-radius: 20px;
+    font-size: $font-size-lg;
+
+    img {
+        width: 22px;
+        height: 21px;
+    }
+}
+
+.payment-address__change {
+    width: 100%;
+}
+
+@include desktop {
+    .btn--primary {
+        min-height: $button-height;
+        font-size: $font-size-xl;
+    }
+
+    .btn--buy {
+        font-size: $font-size-lg;
+
+        img {
+            width: 22px;
+            height: 21px;
+        }
+    }
+
+    .auth__submit {
+        max-width: 399px;
+    }
+
+    .btn--google {
+        max-width: 399px;
+        margin-inline: auto;
+    }
+}

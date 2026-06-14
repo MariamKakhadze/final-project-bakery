@@ -583,5 +583,336 @@ body.nav-open {
     text-align: left;
   }
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 0;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  min-height: 54px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #3E2723;
+  color: #fff;
+  font-size: 16px;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  background-color: #2f1d1a;
+}
+
+.btn--secondary {
+  min-height: 55px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  background-color: #3E2723;
+  color: #fdfdfd;
+  font-size: 16px;
+}
+.btn--secondary:hover, .btn--secondary:focus-visible {
+  background-color: #2f1d1a;
+}
+
+.btn--buy {
+  gap: 14px;
+  flex-shrink: 0;
+  width: 192px;
+  min-height: 50px;
+  padding: 13px 39px;
+  border-radius: 24.5px;
+  background-color: #3E2723;
+  color: #fff;
+  font-size: 16px;
+}
+.btn--buy img {
+  width: 24px;
+  height: 24px;
+}
+.btn--buy:hover, .btn--buy:focus-visible {
+  background-color: #2f1d1a;
+}
+
+.btn--google {
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 54px;
+  padding: 1rem 0.5rem;
+  border: 1px solid #e6e8e7;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  color: #232323;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.btn--google img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.btn--google:hover, .btn--google:focus-visible {
+  border-color: #d8dad9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.hero__btn,
+.about__btn {
+  width: 100%;
+  max-width: 311px;
+}
+
+.auth__submit,
+.contact__submit,
+.payment-form__submit {
+  width: 100%;
+}
+
+.cart-drawer__checkout {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 39px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.cart-drawer__checkout img {
+  width: 22px;
+  height: 21px;
+}
+
+.payment-address__change {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .btn--primary {
+    min-height: 64px;
+    font-size: 24px;
+  }
+  .btn--buy {
+    font-size: 20px;
+  }
+  .btn--buy img {
+    width: 22px;
+    height: 21px;
+  }
+  .auth__submit {
+    max-width: 399px;
+  }
+  .btn--google {
+    max-width: 399px;
+    margin-inline: auto;
+  }
+}
+.products {
+  padding-block: 2.5rem 4rem;
+}
+
+.products__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.products__title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.products__item {
+  width: 100%;
+  max-width: 358px;
+  margin-inline: auto;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.product-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 158px;
+  padding: 20px 55px 19px;
+  background-color: #F3D2B6;
+  border-radius: 20px;
+}
+
+.product-card__media img {
+  width: 100%;
+  max-width: 219px;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding-inline: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.product-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.product-card__name {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.product-card__price {
+  flex-shrink: 0;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.product-card__description {
+  color: #888383;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  width: 100%;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.quantity__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.quantity__btn img {
+  width: 38px;
+  height: 38px;
+}
+
+.quantity__value {
+  min-width: 1ch;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .products {
+    padding-block: 4rem 5rem;
+  }
+  .products__title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+  .products__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1313px;
+  }
+  .products__grid--menu {
+    row-gap: 24px;
+  }
+  .products__item {
+    max-width: none;
+    margin-inline: 0;
+  }
+  .product-card {
+    min-height: 439px;
+    border-radius: 1rem;
+  }
+  .product-card__media {
+    min-height: 236px;
+    padding: 33px 48px;
+    border-radius: 1rem;
+  }
+  .product-card__media img {
+    max-width: 312px;
+    max-height: 170px;
+  }
+  .product-card__body {
+    gap: 1.5rem;
+    padding-inline: 0;
+  }
+  .product-card__name,
+  .product-card__price {
+    font-size: 24px;
+  }
+  .product-card__description {
+    font-size: 16px;
+  }
+  .product-card__footer {
+    justify-content: space-between;
+    gap: 92px;
+  }
+  .quantity {
+    gap: 17px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
