@@ -1043,6 +1043,7 @@ body.nav-open {
 }
 
 .contact__submit {
+  align-self: center;
   width: 100%;
   margin-top: 1.25rem;
   border-radius: 20px;
@@ -1551,6 +1552,22 @@ body.nav-open {
   padding-block: 0;
 }
 
+.hero--about {
+  background-color: #F3D2B6;
+}
+
+.hero--about .hero__inner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 214px;
+  padding-block: 0;
+}
+
+.hero--about .hero__media {
+  max-width: 212px;
+}
+
 .hero--payment {
   background-color: #F3D2B6;
 }
@@ -1691,11 +1708,17 @@ body.nav-open {
     font-size: 24px;
   }
   .hero--contact .hero__inner,
-  .hero--payment .hero__inner {
+  .hero--payment .hero__inner,
+  .hero--about .hero__inner {
     flex-direction: column;
     justify-content: center;
     height: 530px;
     padding-block: 0;
+  }
+  .hero--contact .hero__media,
+  .hero--payment .hero__media,
+  .hero--about .hero__media {
+    max-width: 561px;
   }
   .hero--contact .hero__media {
     max-width: 561px;
@@ -1719,6 +1742,307 @@ body.nav-open {
   .contact__info-title {
     font-size: 40px;
     line-height: 46px;
+  }
+}
+.about-page {
+  padding-bottom: 108px;
+}
+
+.about-story {
+  padding-block: 2.5rem 3rem;
+}
+
+.about-story__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.about-story__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-story__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 358px;
+}
+
+.about-story__title {
+  margin: 0;
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.about-story__text {
+  margin: 0;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-story__media {
+  width: 100%;
+  max-width: 358px;
+  margin: 0;
+}
+
+.about-story__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+
+.about-features {
+  width: 100%;
+  padding-block: 2.5rem 51px;
+  background-color: #F3D2B6;
+}
+
+.about-features__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.about-features__title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.about-features__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.about-features__item {
+  width: 100%;
+  max-width: 300px;
+}
+
+.about-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.about-feature__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  min-height: 59px;
+  padding: 4px 12px;
+  border-radius: 7px;
+  background-color: #000;
+  color: #F3D2B6;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.about-feature__title {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.about-feature__text {
+  margin: 0;
+  color: #656565;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-values {
+  padding-block: 3rem 2.5rem;
+}
+
+.about-values__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about-values__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-values__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 358px;
+}
+
+.about-values__media {
+  width: 100%;
+  max-width: 358px;
+  margin: 0;
+}
+
+.about-values__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+
+.about-values__title {
+  margin: 0;
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.about-values__text {
+  margin: 0;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .about-story {
+    padding-block: 120px 4rem;
+  }
+  .about-story__wrapper {
+    align-items: stretch;
+    gap: 24px;
+  }
+  .about-story__title {
+    font-size: 40px;
+    text-align: left;
+    letter-spacing: 0.08em;
+  }
+  .about-story__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 26px;
+  }
+  .about-story__content {
+    max-width: none;
+    gap: 24px;
+  }
+  .about-story__text {
+    font-size: 18px;
+  }
+  .about-story__media {
+    max-width: none;
+  }
+  .about-story__media img {
+    aspect-ratio: 645/355;
+  }
+  .about-features {
+    padding-block: 57px 51px;
+  }
+  .about-features__inner {
+    gap: 92px;
+  }
+  .about-features__title {
+    font-size: 40px;
+    letter-spacing: 0.08em;
+  }
+  .about-features__list {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 22px;
+  }
+  .about-features__item {
+    flex: 0 1 300px;
+    max-width: 300px;
+  }
+  .about-feature {
+    gap: 1.25rem;
+  }
+  .about-feature__title {
+    font-size: 36px;
+  }
+  .about-feature__text {
+    font-size: 18px;
+  }
+  .about-values {
+    padding-block: 120px 4rem;
+  }
+  .about-values__wrapper {
+    align-items: stretch;
+  }
+  .about-values__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 26px;
+  }
+  .about-values__content {
+    max-width: none;
+    gap: 24px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .about-values__title {
+    font-size: 40px;
+    text-align: left;
+    letter-spacing: 0.08em;
+  }
+  .about-values__text {
+    font-size: 18px;
+  }
+  .about-values__media {
+    max-width: none;
+    height: 100%;
+    min-height: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about-values__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .menu {
