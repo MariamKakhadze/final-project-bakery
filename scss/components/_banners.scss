@@ -131,6 +131,23 @@
     padding-block: 0;
 }
 
+// About page hero
+.hero--about {
+    background-color: $color-secondary;
+}
+
+.hero--about .hero__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 214px;
+    padding-block: 0;
+}
+
+.hero--about .hero__media {
+    max-width: 212px;
+}
+
 // Payment page hero
 .hero--payment {
     background-color: $color-secondary;
@@ -282,11 +299,18 @@
     }
 
     .hero--contact .hero__inner,
-    .hero--payment .hero__inner {
+    .hero--payment .hero__inner,
+    .hero--about .hero__inner {
         flex-direction: column;
         justify-content: center;
         height: 530px;
         padding-block: 0;
+    }
+
+    .hero--contact .hero__media,
+    .hero--payment .hero__media,
+    .hero--about .hero__media {
+        max-width: 561px;
     }
 
     .hero--contact .hero__media {
