@@ -101,6 +101,28 @@
     }
 }
 
+// Menu search filter toggle
+.btn--search-filter {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: $radius-md;
+    background-color: $color-primary;
+    color: #fff;
+
+    svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-primary-hover;
+    }
+}
+
 // Page-specific primary buttons
 .hero__btn,
 .about__btn {
@@ -153,5 +175,10 @@
     .btn--google {
         max-width: 399px;
         margin-inline: auto;
+    }
+
+    .btn--search-filter {
+        width: 56px;
+        height: 56px;
     }
 }

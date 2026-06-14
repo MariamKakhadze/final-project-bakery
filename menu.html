@@ -61,69 +61,94 @@
             <div class="menu__inner container">
                 <h1 id="menu-title" class="menu__title">ფუნთუშები</h1>
 
-                <nav class="menu-filters" aria-label="პროდუქტის კატეგორიები">
-                    <ul class="menu-filters__list" role="tablist">
-                        <li class="menu-filters__item" role="presentation">
-                            <button
-                                type="button"
-                                class="menu-filters__btn menu-filters__btn--active"
-                                role="tab"
-                                aria-selected="true"
-                                aria-controls="menu-products"
-                                data-category="buns"
+                <div class="menu__controls">
+                    <form class="menu-search" role="search" aria-label="პროდუქტის ძებნა">
+                        <label for="menu-search" class="visually-hidden">პროდუქტის ძებნა</label>
+                        <div class="menu-search__field">
+                            <span class="menu-search__icon" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <input
+                                type="search"
+                                id="menu-search"
+                                name="search"
+                                class="menu-search__input"
+                                placeholder="პროდუქტის ძებნა..."
+                                autocomplete="off"
                             >
-                                ფუნთუშები
-                            </button>
-                        </li>
-                        <li class="menu-filters__item" role="presentation">
-                            <button
-                                type="button"
-                                class="menu-filters__btn"
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="menu-products"
-                                data-category="cakes"
-                            >
-                                ტორტები
-                            </button>
-                        </li>
-                        <li class="menu-filters__item" role="presentation">
-                            <button
-                                type="button"
-                                class="menu-filters__btn"
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="menu-products"
-                                data-category="cookies"
-                            >
-                                ნამცხვრები
-                            </button>
-                        </li>
-                        <li class="menu-filters__item" role="presentation">
-                            <button
-                                type="button"
-                                class="menu-filters__btn"
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="menu-products"
-                                data-category="pastry"
-                            >
-                                ცომეული
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-                <form class="menu-search" role="search" aria-label="პროდუქტის ძებნა">
-                    <label for="menu-search" class="visually-hidden">პროდუქტის ძებნა</label>
-                    <input
-                        type="search"
-                        id="menu-search"
-                        name="search"
-                        class="menu-search__input"
-                        placeholder="პროდუქტის ძებნა..."
-                        autocomplete="off"
-                    >
-                </form>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn--search-filter menu-search__filter"
+                            aria-label="ფილტრის გახსნა"
+                            aria-controls="menu-filter-panel"
+                            aria-expanded="false"
+                            data-filter-open
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M4 6h16v2H4V6zm3 5h10v2H7v-2zm4 5h2v2h-2v-2z"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <nav class="menu-filters menu-filters--inline" aria-label="პროდუქტის კატეგორიები">
+                        <ul class="menu-filters__list" role="tablist">
+                            <li class="menu-filters__item" role="presentation">
+                                <button
+                                    type="button"
+                                    class="menu-filters__btn menu-filters__btn--active"
+                                    role="tab"
+                                    aria-selected="true"
+                                    aria-controls="menu-products"
+                                    data-category="buns"
+                                >
+                                    ფუნთუშები
+                                </button>
+                            </li>
+                            <li class="menu-filters__item" role="presentation">
+                                <button
+                                    type="button"
+                                    class="menu-filters__btn"
+                                    role="tab"
+                                    aria-selected="false"
+                                    aria-controls="menu-products"
+                                    data-category="cakes"
+                                >
+                                    ტორტები
+                                </button>
+                            </li>
+                            <li class="menu-filters__item" role="presentation">
+                                <button
+                                    type="button"
+                                    class="menu-filters__btn"
+                                    role="tab"
+                                    aria-selected="false"
+                                    aria-controls="menu-products"
+                                    data-category="cookies"
+                                >
+                                    ნამცხვრები
+                                </button>
+                            </li>
+                            <li class="menu-filters__item" role="presentation">
+                                <button
+                                    type="button"
+                                    class="menu-filters__btn"
+                                    role="tab"
+                                    aria-selected="false"
+                                    aria-controls="menu-products"
+                                    data-category="pastry"
+                                >
+                                    ცომეული
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <p class="menu__empty" id="menu-empty" hidden>პროდუქტი ვერ მოიძებნა</p>
 
                 <ul
                     id="menu-products"
@@ -133,6 +158,64 @@
                 ></ul>
             </div>
         </section>
+
+        <div class="menu-filter-panel" id="menu-filter-panel" hidden>
+            <div class="menu-filter-panel__backdrop" data-filter-close tabindex="-1" aria-hidden="true"></div>
+
+            <div
+                class="menu-filter-panel__dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="menu-filter-title"
+            >
+                <button
+                    type="button"
+                    class="menu-filter-panel__close"
+                    data-filter-close
+                    aria-label="ფილტრის დახურვა"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <h2 id="menu-filter-title" class="menu-filter-panel__title">აირჩიე კატეგორია</h2>
+
+                <ul class="menu-filter-panel__list" role="tablist">
+                    <li class="menu-filter-panel__item">
+                        <button
+                            type="button"
+                            class="menu-filter-panel__btn menu-filter-panel__btn--active"
+                            data-category="buns"
+                            aria-selected="true"
+                        >
+                            <img src="assets/images/cinnamon-roll.png" alt="" width="80" height="44">
+                            <span>ფუნთუშები</span>
+                        </button>
+                    </li>
+                    <li class="menu-filter-panel__item">
+                        <button type="button" class="menu-filter-panel__btn" data-category="cakes" aria-selected="false">
+                            <img src="assets/images/cinnamon-roll.png" alt="" width="80" height="44">
+                            <span>ტორტები</span>
+                        </button>
+                    </li>
+                    <li class="menu-filter-panel__item">
+                        <button type="button" class="menu-filter-panel__btn" data-category="cookies" aria-selected="false">
+                            <img src="assets/images/cinnamon-roll.png" alt="" width="80" height="44">
+                            <span>ნამცხვრები</span>
+                        </button>
+                    </li>
+                    <li class="menu-filter-panel__item">
+                        <button type="button" class="menu-filter-panel__btn" data-category="pastry" aria-selected="false">
+                            <img src="assets/images/cinnamon-roll.png" alt="" width="80" height="44">
+                            <span>ცომეული</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <button type="button" class="btn btn--primary menu-filter-panel__apply" data-filter-apply>
+                    გამოყენება
+                </button>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
