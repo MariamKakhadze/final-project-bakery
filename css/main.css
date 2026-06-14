@@ -914,5 +914,790 @@ body.nav-open {
     gap: 17px;
   }
 }
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field__label {
+  color: #888383;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.form-field__input {
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 20px;
+  border: 1px solid rgba(62, 39, 35, 0.7);
+  border-radius: 0.625rem;
+  background-color: #fef8f3;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 18px;
+}
+.form-field__input::placeholder {
+  color: #888383;
+}
+.form-field__input:focus {
+  outline: 2px solid rgba(62, 39, 35, 0.25);
+  outline-offset: 1px;
+}
+
+.form-field__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-field__control .form-field__input {
+  padding-right: 52px;
+}
+
+.form-field__toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.form-field__icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.form-field__input--with-icon {
+  padding-left: 50px;
+}
+
+.form-field--filled {
+  position: relative;
+  gap: 0;
+  padding-top: 10px;
+}
+.form-field--filled .form-field__label {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  z-index: 1;
+  padding: 0 4px;
+  background-color: #fef8f3;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 100%;
+  max-width: 633px;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.contact__submit {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-radius: 20px;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 16px 4rem;
+  background-color: #fff8f2;
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 591px;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+}
+
+.auth__header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.auth__title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.auth__subtitle {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 399px;
+  margin-inline: auto;
+}
+
+.auth__form .form-field--filled .form-field__label {
+  background-color: #fff;
+}
+
+.auth__submit,
+.auth__google {
+  margin-inline: auto;
+}
+
+.auth__divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth__divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e6e8e7;
+}
+
+.auth__divider-text {
+  color: #656565;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.auth__switch {
+  margin-top: 2rem;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth__switch-link {
+  color: #3E2723;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.auth__switch-link:hover, .auth__switch-link:focus-visible {
+  color: #2f1d1a;
+}
+
+.payment-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 108px;
+}
+
+.payment-address,
+.payment-checkout {
+  width: 100%;
+  max-width: 644px;
+}
+
+.payment-address {
+  margin-bottom: 64px;
+}
+
+.payment-address__card {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  width: 100%;
+  max-width: 639px;
+  padding: 32px 23px;
+  background-color: #fff;
+  border-radius: 1.25rem;
+}
+
+.address-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 65px;
+  padding: 10px 24px;
+  border: 1px solid rgba(62, 39, 35, 0.7);
+  border-radius: 0.625rem;
+  background-color: #fef8f3;
+}
+
+.address-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.address-card__label {
+  margin: 0;
+  color: #888383;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.address-card__value {
+  margin: 0;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.address-card__toggle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.address-card__toggle-indicator {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background-color: #d9d9d9;
+  transition: background-color 0.2s ease;
+}
+.address-card__toggle-indicator::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.address-card--selected .address-card__toggle-indicator {
+  background-color: #3E2723;
+}
+.address-card--selected .address-card__toggle-indicator::after {
+  transform: translateX(20px);
+}
+
+.payment-address__change {
+  align-self: stretch;
+}
+
+.payment-section__title {
+  width: 100%;
+  margin-bottom: 24px;
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.payment-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.payment-form__card {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 100%;
+  max-width: 644px;
+  padding: 26px;
+  background-color: #fff;
+  border-radius: 1.25rem;
+}
+
+.payment-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.payment-form__legend {
+  margin-bottom: 24px;
+  color: #888383;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.payment-form__card-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.payment-form__card-type {
+  position: relative;
+  cursor: pointer;
+}
+.payment-form__card-type input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.payment-form__card-type-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  min-height: 64px;
+  padding: 0.5rem;
+  border: 1px solid rgba(62, 39, 35, 0.7);
+  border-radius: 0.625rem;
+  background-color: #fef8f3;
+  color: #656565;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.payment-form__card-type input:checked + .payment-form__card-type-box {
+  border: 2px solid #3E2723;
+  color: #3E2723;
+}
+
+.payment-form__card-type input:focus-visible + .payment-form__card-type-box {
+  outline: 2px solid rgba(62, 39, 35, 0.25);
+  outline-offset: 2px;
+}
+
+.payment-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 21px;
+}
+
+.payment-form__divider {
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background-color: rgba(62, 39, 35, 0.2);
+}
+
+.payment-form__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-total__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-total__label,
+.cart-total__value {
+  margin: 0;
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.cart-total__row--total .cart-total__label,
+.cart-total__row--total .cart-total__value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.payment-form__submit {
+  align-self: center;
+  border-radius: 20px;
+}
+
+@media (min-width: 1024px) {
+  .contact__form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+  }
+  .contact__submit {
+    max-width: 465px;
+  }
+  .auth-page .auth {
+    min-height: calc(100vh - 128px);
+    align-items: center;
+    padding-block: 3rem 4rem;
+  }
+  .auth__card {
+    padding: 2rem 4rem 2.5rem;
+  }
+  .auth__title {
+    font-size: 36px;
+  }
+  .auth__subtitle {
+    font-size: 24px;
+  }
+  .payment-page__inner {
+    padding-top: 79px;
+    padding-bottom: 108px;
+  }
+  .payment-section__title {
+    font-size: 36px;
+  }
+  .payment-address__card {
+    padding: 53px 23px 54px;
+    gap: 101px;
+  }
+  .payment-form__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+  }
+  .payment-form__submit {
+    max-width: 582px;
+  }
+}
+.hero {
+  background-color: #F3D2B6;
+  min-height: 214px;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1.5rem 2rem;
+}
+
+.hero__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 160px;
+}
+
+.hero__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 220px;
+}
+
+.hero__title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.hero__subtitle {
+  color: #656565;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hero__btn {
+  align-self: flex-start;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 108px;
+}
+
+.about__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.about__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 179px;
+  padding-block: 2rem;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 486px;
+  text-align: center;
+}
+
+.about__title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.about__text {
+  color: #847a78;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about__btn {
+  max-width: 310px;
+}
+
+.hero--contact {
+  background-color: #F3D2B6;
+}
+
+.hero--contact .hero__inner {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: 530px;
+  padding-block: 0;
+}
+
+.hero--payment {
+  background-color: #F3D2B6;
+}
+
+.hero--payment .hero__inner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 530px;
+  padding-block: 0;
+}
+
+.hero__inner--center {
+  align-items: center;
+  text-align: center;
+}
+
+.hero__media--center {
+  max-width: 100%;
+}
+
+.hero__title--center {
+  width: 100%;
+  max-width: 538px;
+  text-align: center;
+}
+
+.contact {
+  padding-block: 2.5rem 4rem;
+}
+
+.contact__inner {
+  width: 100%;
+}
+
+.contact__layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.contact__info {
+  width: 100%;
+  max-width: 385px;
+}
+
+.contact__info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact__info-title {
+  color: #3E2723;
+  font-family: "ALK Katerina", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.contact__info-subtitle {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact__detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact__detail img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+}
+
+.contact__detail-text {
+  color: #3E2723;
+  font-family: "BPG Banner Caps", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    min-height: 530px;
+    padding-block: 2.5rem;
+  }
+  .hero__media {
+    flex: 0 1 561px;
+    max-width: 561px;
+    max-height: 306px;
+    object-fit: contain;
+  }
+  .hero__content {
+    flex: 0 1 538px;
+    max-width: 538px;
+    gap: 4rem;
+  }
+  .hero__title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+  .hero__subtitle {
+    max-width: 387px;
+    font-size: 24px;
+  }
+  .about__inner {
+    min-height: 418px;
+    padding-block: 4rem;
+  }
+  .about__content {
+    gap: 44px;
+  }
+  .about__title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+  .about__text {
+    font-size: 24px;
+  }
+  .hero--contact .hero__inner,
+  .hero--payment .hero__inner {
+    flex-direction: column;
+    justify-content: center;
+    height: 530px;
+    padding-block: 0;
+  }
+  .hero--contact .hero__media {
+    max-width: 561px;
+  }
+  .hero--payment .hero__media {
+    max-width: 561px;
+  }
+  .hero--contact .hero__title {
+    font-size: 36px;
+    letter-spacing: 0.08em;
+  }
+  .contact {
+    padding-block: 3rem 5rem;
+  }
+  .contact__layout {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 56px;
+  }
+  .contact__info-title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
