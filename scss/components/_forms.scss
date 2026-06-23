@@ -1,0 +1,514 @@
+@use '../abstracts' as *;
+
+// Shared form fields
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+}
+
+.form-field__label {
+    color: $color-text-light;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+}
+
+.form-field__input {
+    width: 100%;
+    min-height: $input-height;
+    padding: 12px 20px;
+    border: 1px solid rgb(62 39 35 / 70%);
+    border-radius: $radius-sm;
+    background-color: #fef8f3;
+    color: $color-text;
+    font-family: $font-main;
+    font-size: $font-size-md;
+
+    &::placeholder {
+        color: $color-text-light;
+    }
+
+    &:focus {
+        outline: 2px solid rgb(62 39 35 / 25%);
+        outline-offset: 1px;
+    }
+}
+
+.form-field__textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-field__control {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-field__control .form-field__input {
+    padding-right: 52px;
+}
+
+.form-field__toggle {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.form-field__icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.form-field__input--with-icon {
+    padding-left: 50px;
+}
+
+.form-field--filled {
+    position: relative;
+    gap: 0;
+    padding-top: 10px;
+
+    .form-field__label {
+        position: absolute;
+        top: 0;
+        left: 12px;
+        z-index: 1;
+        padding: 0 4px;
+        background-color: #fef8f3;
+    }
+}
+
+// Contact form
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width: 100%;
+    max-width: 633px;
+    padding: $spacing-10;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.contact__form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-5;
+}
+
+.contact__submit {
+    align-self: center;
+    width: 100%;
+    margin-top: $spacing-5;
+    border-radius: 20px;
+}
+
+// Auth — sign in / sign up
+.auth {
+    display: flex;
+    justify-content: center;
+    padding: $spacing-10 $container-padding $spacing-16;
+    background-color: $color-accent-light;
+}
+
+.auth__card {
+    width: 100%;
+    max-width: 591px;
+    padding: $spacing-8 $spacing-10;
+    background-color: #fff;
+    border-radius: $radius-lg;
+}
+
+.auth__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: $spacing-8;
+}
+
+.auth__title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: $line-height-tight;
+    letter-spacing: 0.06em;
+}
+
+.auth__subtitle {
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-md;
+    line-height: $line-height-base;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 399px;
+    margin-inline: auto;
+}
+
+.auth__form .form-field--filled .form-field__label {
+    background-color: #fff;
+}
+
+.auth__submit,
+.auth__google {
+    margin-inline: auto;
+}
+
+.auth__divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth__divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #e6e8e7;
+}
+
+.auth__divider-text {
+    color: $color-text-muted;
+    font-family: $font-main;
+    font-size: $font-size-xl;
+    line-height: $line-height-tight;
+}
+
+.auth__switch {
+    margin-top: $spacing-8;
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-md;
+    line-height: $line-height-base;
+    text-align: center;
+}
+
+.auth__switch-link {
+    color: $color-primary;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover,
+    &:focus-visible {
+        color: $color-primary-hover;
+    }
+}
+
+// Payment page layout
+.payment-page__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 108px;
+}
+
+.payment-address,
+.payment-checkout {
+    width: 100%;
+    max-width: 644px;
+}
+
+// Payment address
+.payment-address {
+    margin-bottom: 64px;
+}
+
+.payment-address__card {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
+    max-width: 639px;
+    padding: 32px 23px;
+    background-color: #fff;
+    border-radius: $radius-lg;
+}
+
+.address-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-4;
+    min-height: 65px;
+    padding: 10px 24px;
+    border: 1px solid rgb(62 39 35 / 70%);
+    border-radius: $radius-sm;
+    background-color: #fef8f3;
+}
+
+.address-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.address-card__label {
+    margin: 0;
+    color: $color-text-light;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-tight;
+}
+
+.address-card__value {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-tight;
+}
+
+.address-card__toggle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.address-card__toggle-indicator {
+    position: relative;
+    display: block;
+    width: 44px;
+    height: 24px;
+    border-radius: $radius-pill;
+    background-color: #d9d9d9;
+    transition: background-color 0.2s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        transition: transform 0.2s ease;
+    }
+}
+
+.address-card--selected .address-card__toggle-indicator {
+    background-color: $color-primary;
+
+    &::after {
+        transform: translateX(20px);
+    }
+}
+
+.payment-address__change {
+    align-self: stretch;
+}
+
+// Payment form
+.payment-section__title {
+    width: 100%;
+    margin-bottom: 24px;
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: $line-height-tight;
+    letter-spacing: 0.06em;
+}
+
+.payment-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.payment-form__card {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width: 100%;
+    max-width: 644px;
+    padding: 26px;
+    background-color: #fff;
+    border-radius: $radius-lg;
+}
+
+.payment-form__fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.payment-form__legend {
+    margin-bottom: 24px;
+    color: $color-text-light;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+}
+
+.payment-form__card-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+}
+
+.payment-form__card-type {
+    position: relative;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.payment-form__card-type-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 106px;
+    min-height: 64px;
+    padding: $spacing-2;
+    border: 1px solid rgb(62 39 35 / 70%);
+    border-radius: $radius-sm;
+    background-color: #fef8f3;
+    color: $color-text-muted;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-tight;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.payment-form__card-type input:checked + .payment-form__card-type-box {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+}
+
+.payment-form__card-type input:focus-visible + .payment-form__card-type-box {
+    outline: 2px solid rgb(62 39 35 / 25%);
+    outline-offset: 2px;
+}
+
+.payment-form__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 21px;
+}
+
+.payment-form__divider {
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background-color: rgb(62 39 35 / 20%);
+}
+
+.payment-form__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cart-total__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-4;
+}
+
+.cart-total__label,
+.cart-total__value {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    line-height: $line-height-tight;
+}
+
+.cart-total__row--total .cart-total__label,
+.cart-total__row--total .cart-total__value {
+    font-size: $font-size-xl;
+    font-weight: 700;
+}
+
+.payment-form__submit {
+    align-self: center;
+    border-radius: 20px;
+}
+
+@include desktop {
+    .contact__form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 21px;
+    }
+
+    .contact__submit {
+        max-width: 465px;
+    }
+
+    .auth-page .auth {
+        min-height: calc(100vh - $header-height);
+        align-items: center;
+        padding-block: $spacing-12 $spacing-16;
+    }
+
+    .auth__card {
+        padding: $spacing-8 $spacing-16 $spacing-10;
+    }
+
+    .auth__title {
+        font-size: $font-size-2xl;
+    }
+
+    .auth__subtitle {
+        font-size: $font-size-xl;
+    }
+
+    .payment-page__inner {
+        padding-top: 79px;
+        padding-bottom: 108px;
+    }
+
+    .payment-section__title {
+        font-size: $font-size-2xl;
+    }
+
+    .payment-address__card {
+        padding: 53px 23px 54px;
+        gap: 101px;
+    }
+
+    .payment-form__row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 38px;
+    }
+
+    .payment-form__submit {
+        max-width: 582px;
+    }
+}

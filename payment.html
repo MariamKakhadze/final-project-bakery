@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULE — გადახდა</title>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="158" height="86">
+            </a>
+
+            <nav class="header__nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="index.html" class="header__nav-link">მთავარი</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="menu.html" class="header__nav-link">მენიუ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="contact.html" class="header__nav-link">კონტაქტი</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="about.html" class="header__nav-link">ჩვენს შესახებ</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button
+                    type="button"
+                    class="header__burger"
+                    aria-label="მენიუ"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                    data-nav-toggle
+                >
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="header__action" aria-label="კალათა" data-cart-open>
+                    <img src="assets/icons/cart.svg" alt="" width="36" height="36">
+                </button>
+                <a href="sign-in.html" class="header__action" aria-label="პროფილი">
+                    <img src="assets/icons/profile.svg" alt="" width="36" height="36">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main payment-page">
+
+        <!-- Hero -->
+        <section class="hero hero--payment" aria-label="BULE პროდუქტი">
+            <div class="hero__inner container hero__inner--center">
+                <figure class="hero__media hero__media--center">
+                    <img
+                        src="assets/images/cinnamon-roll.png"
+                        alt="დარიჩინის ფუნთუშა"
+                        width="561"
+                        height="306"
+                    >
+                </figure>
+            </div>
+        </section>
+
+        <div class="payment-page__inner container">
+
+            <!-- Delivery address -->
+            <section class="payment-address" aria-labelledby="payment-address-title">
+                <h1 id="payment-address-title" class="payment-section__title">თქვენი მისამართი</h1>
+
+                <div class="payment-address__card">
+                    <article class="address-card address-card--selected">
+                        <div class="address-card__body">
+                            <p class="address-card__label">სახლის მისამართი</p>
+                            <p class="address-card__value">ბელინსკის მე-10 შესახვევი</p>
+                        </div>
+                        <button
+                            type="button"
+                            class="address-card__toggle"
+                            aria-label="მისამართის არჩევა"
+                            aria-pressed="true"
+                        >
+                            <span class="address-card__toggle-indicator" aria-hidden="true"></span>
+                        </button>
+                    </article>
+
+                    <button type="button" class="btn btn--secondary payment-address__change">ცვლილება</button>
+                </div>
+            </section>
+
+            <!-- Payment form -->
+            <section class="payment-checkout" aria-labelledby="payment-card-title">
+                <h2 id="payment-card-title" class="payment-section__title">თქვენი ბარათის მონაცემები</h2>
+
+                <form class="payment-form" action="#" method="post">
+                    <div class="payment-form__card">
+                        <fieldset class="payment-form__fieldset payment-form__fieldset--card-type">
+                            <legend class="payment-form__legend">ბარათის ტიპი</legend>
+                            <div class="payment-form__card-types">
+                                <label class="payment-form__card-type">
+                                    <input type="radio" name="card-type" value="visa" checked>
+                                    <span class="payment-form__card-type-box" aria-hidden="true">Visa</span>
+                                </label>
+                                <label class="payment-form__card-type">
+                                    <input type="radio" name="card-type" value="mastercard">
+                                    <span class="payment-form__card-type-box" aria-hidden="true">Mastercard</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-field">
+                            <label for="payment-owner" class="form-field__label">მფლობელის სახელი</label>
+                            <input
+                                type="text"
+                                id="payment-owner"
+                                name="card-owner"
+                                class="form-field__input"
+                                placeholder="სახელი"
+                                autocomplete="cc-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="payment-number" class="form-field__label">ბარათის ნომერი</label>
+                            <input
+                                type="text"
+                                id="payment-number"
+                                name="card-number"
+                                class="form-field__input"
+                                placeholder="xxxxxxxxx"
+                                inputmode="numeric"
+                                autocomplete="cc-number"
+                                required
+                            >
+                        </div>
+
+                        <div class="payment-form__row">
+                            <div class="form-field">
+                                <label for="payment-expiry" class="form-field__label">ვადა</label>
+                                <input
+                                    type="text"
+                                    id="payment-expiry"
+                                    name="card-expiry"
+                                    class="form-field__input"
+                                    placeholder="თვე/წელი"
+                                    autocomplete="cc-exp"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="payment-cvv" class="form-field__label">უსაფრთხოების კოდი</label>
+                                <input
+                                    type="password"
+                                    id="payment-cvv"
+                                    name="card-cvv"
+                                    class="form-field__input"
+                                    placeholder="xxx"
+                                    inputmode="numeric"
+                                    autocomplete="cc-csc"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <hr class="payment-form__divider">
+
+                        <dl class="cart-total payment-form__summary">
+                            <div class="cart-total__row">
+                                <dt class="cart-total__label">სულ</dt>
+                                <dd class="cart-total__value">30₾</dd>
+                            </div>
+                            <div class="cart-total__row">
+                                <dt class="cart-total__label">მიტანა</dt>
+                                <dd class="cart-total__value">5₾</dd>
+                            </div>
+                            <div class="cart-total__row cart-total__row--total">
+                                <dt class="cart-total__label">ჯამი</dt>
+                                <dd class="cart-total__value">35₾</dd>
+                            </div>
+                        </dl>
+
+                        <button type="submit" class="btn btn--primary payment-form__submit">გადახდა</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <a href="index.html" class="footer__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="297" height="162">
+            </a>
+
+            <nav class="footer__nav" aria-label="ფუტერის ნავიგაცია">
+                <ul class="footer__nav-list">
+                    <li><a href="index.html" class="footer__nav-link">მთავარი</a></li>
+                    <li><a href="menu.html" class="footer__nav-link">მენიუ</a></li>
+                    <li><a href="about.html" class="footer__nav-link">ჩვენს შესახებ</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contact">
+                <h3 class="footer__heading">დაგვიკავშირდით</h3>
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/phone.svg" alt="" width="24" height="24">
+                        <a href="tel:571151312">571-15-13-12</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/email.svg" alt="" width="24" height="24">
+                        <a href="mailto:username">username</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/location.svg" alt="" width="24" height="24">
+                        <span>username</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <h3 class="footer__heading">შემოგვიერთდით</h3>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <img src="assets/icons/facebook.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/tiktok.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart drawer -->
+    <div class="cart-overlay" id="cart-overlay" hidden>
+        <div class="cart-overlay__backdrop" data-cart-close tabindex="-1" aria-hidden="true"></div>
+
+        <aside
+            class="cart-drawer"
+            id="cart-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cart-title"
+            aria-hidden="true"
+        >
+            <header class="cart-drawer__header">
+                <div class="cart-drawer__heading">
+                    <h2 id="cart-title" class="cart-drawer__title">თქვენი შეკვეთა</h2>
+                </div>
+                <button type="button" class="cart-drawer__close" data-cart-close aria-label="კალათის დახურვა">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </header>
+
+            <ul class="cart-drawer__items">
+                <li class="cart-drawer__item">
+                    <article class="cart-item">
+                        <img
+                            class="cart-item__image"
+                            src="assets/images/cinnamon-roll.png"
+                            alt=""
+                            width="80"
+                            height="80"
+                        >
+                        <div class="cart-item__body">
+                            <h3 class="cart-item__name">დარიჩინის ფუნთუშა</h3>
+                            <div class="cart-item__footer">
+                                <div class="quantity" aria-label="რაოდენობა">
+                                    <button type="button" class="quantity__btn" aria-label="შემცირება">
+                                        <img src="assets/icons/minus.svg" alt="" width="38" height="38">
+                                    </button>
+                                    <span class="quantity__value">2</span>
+                                    <button type="button" class="quantity__btn" aria-label="გაზრდა">
+                                        <img src="assets/icons/plus.svg" alt="" width="38" height="38">
+                                    </button>
+                                </div>
+                                <p class="cart-item__price">20₾</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="cart-drawer__item">
+                    <article class="cart-item">
+                        <img
+                            class="cart-item__image"
+                            src="assets/images/cinnamon-roll.png"
+                            alt=""
+                            width="80"
+                            height="80"
+                        >
+                        <div class="cart-item__body">
+                            <h3 class="cart-item__name">დარიჩინის ფუნთუშა</h3>
+                            <div class="cart-item__footer">
+                                <div class="quantity" aria-label="რაოდენობა">
+                                    <button type="button" class="quantity__btn" aria-label="შემცირება">
+                                        <img src="assets/icons/minus.svg" alt="" width="38" height="38">
+                                    </button>
+                                    <span class="quantity__value">1</span>
+                                    <button type="button" class="quantity__btn" aria-label="გაზრდა">
+                                        <img src="assets/icons/plus.svg" alt="" width="38" height="38">
+                                    </button>
+                                </div>
+                                <p class="cart-item__price">10₾</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <footer class="cart-drawer__footer">
+                <dl class="cart-total">
+                    <div class="cart-total__row">
+                        <dt class="cart-total__label">სულ</dt>
+                        <dd class="cart-total__value">30₾</dd>
+                    </div>
+                    <div class="cart-total__row">
+                        <dt class="cart-total__label">მიტანა</dt>
+                        <dd class="cart-total__value">5₾</dd>
+                    </div>
+                    <div class="cart-total__row cart-total__row--total">
+                        <dt class="cart-total__label">ჯამი</dt>
+                        <dd class="cart-total__value">35₾</dd>
+                    </div>
+                </dl>
+
+                <a href="payment.html" class="btn btn--primary cart-drawer__checkout">
+                    <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
+                    <span>განაგრძე</span>
+                </a>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

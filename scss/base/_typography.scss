@@ -1,0 +1,121 @@
+@use '../abstracts' as *;
+
+* {
+    font-family: $font-main;
+}
+
+body {
+    font-family: $font-main;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-weight: 400;
+    line-height: $line-height-tight;
+}
+
+h1,
+.page-title {
+    font-size: 26px;
+    letter-spacing: 0.06em;
+
+    @include desktop {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+}
+
+h2,
+.section-title {
+    font-size: 26px;
+    letter-spacing: 0.06em;
+
+    @include desktop {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+}
+
+h3,
+.card-title {
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    letter-spacing: 0;
+
+    @include desktop {
+        font-size: $font-size-xl;
+    }
+}
+
+p {
+    color: $color-text-muted;
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    line-height: $line-height-base;
+
+    @include desktop {
+        font-size: $font-size-xl;
+    }
+}
+
+small,
+.text-small {
+    font-family: $font-body;
+    font-size: $font-size-xs;
+}
+
+.text-muted {
+    color: $color-text-muted;
+}
+
+.text-light {
+    color: $color-text-light;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.nav-text {
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    line-height: $line-height-tight;
+}
+
+.button-text {
+    font-family: $font-main;
+    font-size: $font-size-lg;
+    line-height: $line-height-tight;
+
+    @include desktop {
+        font-size: $font-size-xl;
+    }
+}
+
+input,
+textarea,
+select {
+    color: $color-text;
+    font-family: $font-body;
+    font-size: $font-size-md;
+    line-height: $line-height-base;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: $color-text-light;
+    opacity: 1;
+}
+
+button {
+    font-family: $font-main;
+}
+
