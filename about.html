@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULE — ჩვენს შესახებ</title>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="158" height="86">
+            </a>
+
+            <nav class="header__nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="index.html" class="header__nav-link">მთავარი</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="menu.html" class="header__nav-link">მენიუ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="contact.html" class="header__nav-link">კონტაქტი</a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--active">
+                        <a href="about.html" class="header__nav-link">ჩვენს შესახებ</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button
+                    type="button"
+                    class="header__burger"
+                    aria-label="მენიუ"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                    data-nav-toggle
+                >
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="header__action" aria-label="კალათა" data-cart-open>
+                    <img src="assets/icons/cart.svg" alt="" width="36" height="36">
+                </button>
+                <a href="sign-in.html" class="header__action" aria-label="პროფილი">
+                    <img src="assets/icons/profile.svg" alt="" width="36" height="36">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main about-page">
+
+        <!-- Hero -->
+        <section class="hero hero--about" aria-label="BULE პროდუქტი">
+            <div class="hero__inner container hero__inner--center">
+                <figure class="hero__media hero__media--center">
+                    <img
+                        src="assets/images/cinnamon-roll.png"
+                        alt="დარიჩინის ფუნთუშა"
+                        width="561"
+                        height="306"
+                    >
+                </figure>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="about-story" aria-labelledby="about-story-title">
+            <div class="about-story__wrapper container">
+                <h1 id="about-story-title" class="about-story__title">ვინ ვართ ჩვენ</h1>
+
+                <div class="about-story__inner">
+                    <div class="about-story__content">
+                        <p class="about-story__text">
+                            ჩვენი დარიჩინის საცხობი შეიქმნა ერთი მარტივი იდეით შევქმნათ ადგილი, სადაც თითოეული სტუმარი იგრძნობს სახლის სითბოსა და ახლად გამომცხვარი ტკბილეულის განსაკუთრებულ არომატს. ყოველდღიურად ვამზადებთ დარიჩინის ფუნთუშებსა და სხვა საცხობ პროდუქტებს მაღალი ხარისხის ინგრედიენტებით, რათა თითოეულ ლუკმაში იგრძნოთ გემო, რომელიც სიამოვნებას და კომფორტს გჩუქნით.
+                        </p>
+
+                        <p class="about-story__text">
+                            ჩვენთვის საცხობი მხოლოდ დესერტების მომზადება არ არის — ეს არის სიყვარულის, შემოქმედებისა და ტრადიციების გაზიარება. ვზრუნავთ როგორც პროდუქტის ხარისხზე, ისე მომხმარებლის გამოცდილებაზე, რადგან გვჯერა, რომ საუკეთესო მოგონებები ხშირად ერთი თბილი ფუნთუშითა და სასიამოვნო გარემოთი იწყება. ჩვენი მიზანია ყოველი სტუმრის დღე ოდნავ უფრო ტკბილი და განსაკუთრებული გავხადოთ.
+                        </p>
+                    </div>
+
+                    <figure class="about-story__media">
+                        <img
+                            src="assets/images/about-story.png"
+                            alt="BULE საცხობის ინტერიერი"
+                            width="645"
+                            height="355"
+                        >
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="about-features" aria-labelledby="about-features-title">
+            <div class="about-features__inner container">
+                <h2 id="about-features-title" class="about-features__title">ჩვენი პროდუქცია არის</h2>
+
+                <ul class="about-features__list">
+                    <li class="about-features__item">
+                        <article class="about-feature">
+                            <span class="about-feature__number" aria-hidden="true">1</span>
+                            <h3 class="about-feature__title">გემრიელი</h3>
+                            <p class="about-feature__text">
+                                ყოველი ფუნთუშა მზადდება განსაკუთრებული რეცეპტით, რათა დაუვიწყარი გემო და სიამოვნება მოგანიჭოთ.
+                            </p>
+                        </article>
+                    </li>
+
+                    <li class="about-features__item">
+                        <article class="about-feature">
+                            <span class="about-feature__number" aria-hidden="true">2</span>
+                            <h3 class="about-feature__title">ხარისხიანი</h3>
+                            <p class="about-feature__text">
+                                ვიყენებთ მხოლოდ შერჩეულ ინგრედიენტებს, რადგან საუკეთესო შედეგი საუკეთესო ხარისხით იწყება.
+                            </p>
+                        </article>
+                    </li>
+
+                    <li class="about-features__item">
+                        <article class="about-feature">
+                            <span class="about-feature__number" aria-hidden="true">3</span>
+                            <h3 class="about-feature__title">განსაკუთრებული</h3>
+                            <p class="about-feature__text">
+                                ჩვენი თითოეული პროდუქტი იქმნება ზრუნვითა და ყურადღებით, რათა თქვენს დღეში მეტი სითბო და სიხარული შემოვიტანოთ.
+                            </p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="about-values" aria-labelledby="about-values-title">
+            <div class="about-values__wrapper container">
+                <div class="about-values__inner">
+                    <div class="about-values__content">
+                        <h2 id="about-values-title" class="about-values__title">ჩვენი ღირებულებები</h2>
+
+                        <p class="about-values__text">
+                            ჩვენი მთავარი ღირებულებებია ხარისხი, სითბო და მომხმარებელზე ზრუნვა. გვჯერა, რომ საუკეთესო პროდუქტი იქმნება სიყვარულით, პასუხისმგებლობითა და ყურადღებით შერჩეული ინგრედიენტებით. სწორედ ამიტომ, ყოველდღიურად ვცდილობთ შევთავაზოთ ჩვენს სტუმრებს არა მხოლოდ გემრიელი ფუნთუშები, არამედ სასიამოვნო გამოცდილება, რომელიც მათ ჩვენს საცხობში კვლავ და კვლავ დააბრუნებს.
+                        </p>
+                    </div>
+
+                    <figure class="about-values__media">
+                        <img
+                            src="assets/images/about-values.png"
+                            alt="BULE საცხობის გუნდი"
+                            width="633"
+                            height="411"
+                        >
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <a href="index.html" class="footer__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="297" height="162">
+            </a>
+
+            <nav class="footer__nav" aria-label="ფუტერის ნავიგაცია">
+                <ul class="footer__nav-list">
+                    <li><a href="index.html" class="footer__nav-link">მთავარი</a></li>
+                    <li><a href="menu.html" class="footer__nav-link">მენიუ</a></li>
+                    <li><a href="about.html" class="footer__nav-link">ჩვენს შესახებ</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contact">
+                <h3 class="footer__heading">დაგვიკავშირდით</h3>
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/phone.svg" alt="" width="24" height="24">
+                        <a href="tel:571151312">571-15-13-12</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/email.svg" alt="" width="24" height="24">
+                        <a href="mailto:username">username</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/location.svg" alt="" width="24" height="24">
+                        <span>username</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <h3 class="footer__heading">შემოგვიერთდით</h3>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <img src="assets/icons/facebook.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/tiktok.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<!-- Cart drawer overlay — include before closing </body> on every page -->
+<div class="cart-overlay" id="cart-overlay" hidden>
+    <div class="cart-overlay__backdrop" data-cart-close tabindex="-1" aria-hidden="true"></div>
+
+    <aside
+        class="cart-drawer"
+        id="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+        aria-hidden="true"
+    >
+        <header class="cart-drawer__header">
+            <div class="cart-drawer__heading">
+                <h2 id="cart-title" class="cart-drawer__title">თქვენი შეკვეთა</h2>
+            </div>
+            <button type="button" class="cart-drawer__close" data-cart-close aria-label="კალათის დახურვა">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </header>
+
+        <ul class="cart-drawer__items" id="cart-drawer-items"></ul>
+
+        <p class="cart-drawer__empty" id="cart-drawer-empty">კალათა ცარიელია</p>
+
+        <footer class="cart-drawer__footer">
+            <dl class="cart-total">
+                <div class="cart-total__row">
+                    <dt class="cart-total__label">სულ</dt>
+                    <dd class="cart-total__value" data-cart-subtotal>0₾</dd>
+                </div>
+                <div class="cart-total__row">
+                    <dt class="cart-total__label">მიტანა</dt>
+                    <dd class="cart-total__value" data-cart-delivery>0₾</dd>
+                </div>
+                <div class="cart-total__row cart-total__row--total">
+                    <dt class="cart-total__label">ჯამი</dt>
+                    <dd class="cart-total__value" data-cart-total>0₾</dd>
+                </div>
+            </dl>
+
+            <a
+                href="payment.html"
+                class="btn btn--primary cart-drawer__checkout"
+                data-cart-checkout
+                aria-disabled="true"
+            >
+                <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
+                <span>განაგრძე</span>
+            </a>
+        </footer>
+    </aside>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
