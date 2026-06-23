@@ -84,12 +84,19 @@ body.nav-open {
     border: 0;
     background: transparent;
     color: $color-primary;
+    text-decoration: none;
     cursor: pointer;
+
+    &:hover img,
+    &:focus-visible img {
+        filter: brightness(1.45);
+    }
 }
 
 .header__action img {
     width: 28px;
     height: 28px;
+    transition: filter 0.2s ease;
 }
 
 .header__nav {
