@@ -99,6 +99,79 @@ body.nav-open {
     transition: filter 0.2s ease;
 }
 
+.header__profile {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    max-width: 160px;
+    border: 0;
+    background: transparent;
+    color: $color-primary;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover img,
+    &:focus-visible img {
+        filter: brightness(1.45);
+    }
+
+    img {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        transition: filter 0.2s ease;
+    }
+}
+
+.header__profile-name {
+    position: relative;
+    top: 2px;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header__profile-menu {
+    position: relative;
+}
+
+.header__profile-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 110;
+    min-width: 148px;
+    padding: $spacing-2 0;
+    background-color: $color-accent-light;
+    border: 1px solid rgba($color-primary, 0.12);
+    border-radius: $radius-md;
+    box-shadow: 0 8px 24px rgba($color-primary, 0.12);
+}
+
+.header__profile-dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px $spacing-4;
+    border: 0;
+    background: transparent;
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: 1.2;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: rgba($color-primary, 0.08);
+        outline: none;
+    }
+}
+
 .header__nav {
     position: fixed;
     inset: 0;
@@ -199,6 +272,16 @@ body.nav-open {
     .header__action img {
         width: 36px;
         height: 36px;
+    }
+
+    .header__profile img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .header__profile-name {
+        font-size: $font-size-md;
+        max-width: 120px;
     }
 }
 

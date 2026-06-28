@@ -241,4 +241,10 @@
     });
 
     renderCart();
+
+    window.BuleCart = {
+        addToCart: addToCart,
+        openCart: openCart,
+        getProductFromCard: getProductFromCard,
+    };
 })();

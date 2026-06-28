@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2"
+  }
+}

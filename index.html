@@ -48,8 +48,9 @@
                 <button type="button" class="header__action" aria-label="bucket" data-cart-open>
                     <img src="assets/icons/cart.svg" alt="" width="36" height="36">
                 </button>
-                <a href="sign-in.html" class="header__action" aria-label="profile">
+                <a href="sign-in.html" class="header__profile" data-auth-profile aria-label="პროფილი">
                     <img src="assets/icons/profile.svg" alt="" width="36" height="36">
+                    <span class="header__profile-name" data-auth-profile-name hidden></span>
                 </a>
             </div>
         </div>
@@ -82,130 +83,30 @@
             <div class="products__inner container">
                 <h2 id="products-title" class="products__title">პოპულარული პროდუქტები</h2>
 
-                <ul class="products__grid">
-                    <li class="products__item">
-                        <article class="product-card">
-                            <figure class="product-card__media">
-                                <img
-                                    src="assets/images/cinnamon-roll.png"
-                                    alt="cinnamon roll"
-                                    width="312"
-                                    height="170"
-                                >
-                            </figure>
+                <div class="products__carousel">
+                    <button
+                        type="button"
+                        class="products__arrow products__arrow--prev"
+                        data-popular-prev
+                        aria-label="წინა პროდუქტები"
+                        disabled
+                    >
+                        <span aria-hidden="true"></span>
+                    </button>
 
-                            <div class="product-card__body">
-                                <div class="product-card__header">
-                                    <h3 class="product-card__name">დარიჩინის ფუნთუშა</h3>
-                                    <p class="product-card__price">10₾</p>
-                                </div>
+                    <div class="products__viewport" data-popular-viewport tabindex="0">
+                        <ul class="products__grid products__grid--carousel" id="popular-products"></ul>
+                    </div>
 
-                                <p class="product-card__description">
-                                    ჩვენი გემრიელი პროდუქცია მხოლოდ შენთვის, სიყვარულით შექმნილი
-                                </p>
-
-                                <div class="product-card__footer">
-                                    <div class="quantity" aria-label="amount">
-                                        <button type="button" class="quantity__btn" aria-label="less">
-                                            <img src="assets/icons/minus.svg" alt="" width="38" height="38">
-                                        </button>
-                                        <span class="quantity__value">4</span>
-                                        <button type="button" class="quantity__btn" aria-label="more">
-                                            <img src="assets/icons/plus.svg" alt="" width="38" height="38">
-                                        </button>
-                                    </div>
-
-                                    <button type="button" class="btn btn--buy product-card__buy">
-                                        <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
-                                        <span>იყიდე</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-
-                    <li class="products__item">
-                        <article class="product-card">
-                            <figure class="product-card__media">
-                                <img
-                                    src="assets/images/cinnamon-roll.png"
-                                    alt="cinnamon roll"
-                                    width="312"
-                                    height="170"
-                                >
-                            </figure>
-
-                            <div class="product-card__body">
-                                <div class="product-card__header">
-                                    <h3 class="product-card__name">დარიჩინის ფუნთუშა</h3>
-                                    <p class="product-card__price">10₾</p>
-                                </div>
-
-                                <p class="product-card__description">
-                                    ჩვენი გემრიელი პროდუქცია მხოლოდ შენთვის, სიყვარულით შექმნილი
-                                </p>
-
-                                <div class="product-card__footer">
-                                    <div class="quantity" aria-label="amount">
-                                        <button type="button" class="quantity__btn" aria-label="less">
-                                            <img src="assets/icons/minus.svg" alt="" width="38" height="38">
-                                        </button>
-                                        <span class="quantity__value">4</span>
-                                        <button type="button" class="quantity__btn" aria-label="more">
-                                            <img src="assets/icons/plus.svg" alt="" width="38" height="38">
-                                        </button>
-                                    </div>
-
-                                    <button type="button" class="btn btn--buy product-card__buy">
-                                        <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
-                                        <span>იყიდე</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-
-                    <li class="products__item">
-                        <article class="product-card">
-                            <figure class="product-card__media">
-                                <img
-                                    src="assets/images/cinnamon-roll.png"
-                                    alt="cinnamon roll"
-                                    width="312"
-                                    height="170"
-                                >
-                            </figure>
-
-                            <div class="product-card__body">
-                                <div class="product-card__header">
-                                    <h3 class="product-card__name">დარიჩინის ფუნთუშა</h3>
-                                    <p class="product-card__price">10₾</p>
-                                </div>
-
-                                <p class="product-card__description">
-                                    ჩვენი გემრიელი პროდუქცია მხოლოდ შენთვის, სიყვარულით შექმნილი
-                                </p>
-
-                                <div class="product-card__footer">
-                                    <div class="quantity" aria-label="amount">
-                                        <button type="button" class="quantity__btn" aria-label="less">
-                                            <img src="assets/icons/minus.svg" alt="" width="38" height="38">
-                                        </button>
-                                        <span class="quantity__value">4</span>
-                                        <button type="button" class="quantity__btn" aria-label="more">
-                                            <img src="assets/icons/plus.svg" alt="" width="38" height="38">
-                                        </button>
-                                    </div>
-
-                                    <button type="button" class="btn btn--buy product-card__buy">
-                                        <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
-                                        <span>იყიდე</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
+                    <button
+                        type="button"
+                        class="products__arrow products__arrow--next"
+                        data-popular-next
+                        aria-label="შემდეგი პროდუქტები"
+                    >
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -287,7 +188,7 @@
         </div>
     </footer>
 
-<!-- Cart drawer overlay — include before closing </body> on every page -->
+<!-- Cart drawer overlay -->
 <div class="cart-overlay" id="cart-overlay" hidden>
     <div class="cart-overlay__backdrop" data-cart-close tabindex="-1" aria-hidden="true"></div>
 
@@ -341,8 +242,14 @@
     </aside>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/home.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/product-modal.js"></script>
 </body>
 </html>
 

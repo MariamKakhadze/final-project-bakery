@@ -49,8 +49,9 @@
                 <button type="button" class="header__action" aria-label="კალათა" data-cart-open>
                     <img src="assets/icons/cart.svg" alt="" width="36" height="36">
                 </button>
-                <a href="sign-in.html" class="header__action" aria-label="პროფილი">
+                <a href="sign-in.html" class="header__profile" data-auth-profile aria-label="პროფილი">
                     <img src="assets/icons/profile.svg" alt="" width="36" height="36">
+                    <span class="header__profile-name" data-auth-profile-name hidden></span>
                 </a>
             </div>
         </div>
@@ -253,7 +254,7 @@
         </div>
     </footer>
 
-<!-- Cart drawer overlay — include before closing </body> on every page -->
+<!-- Cart drawer overlay -->
 <div class="cart-overlay" id="cart-overlay" hidden>
     <div class="cart-overlay__backdrop" data-cart-close tabindex="-1" aria-hidden="true"></div>
 
@@ -307,6 +308,9 @@
     </aside>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth-ui.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/cart.js"></script>
 </body>
