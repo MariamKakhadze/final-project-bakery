@@ -1,0 +1,344 @@
+@use '../abstracts' as *;
+
+// Homepage hero
+.hero {
+    background-color: $color-secondary;
+    min-height: 214px;
+}
+
+.hero__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-4;
+    padding-block: $spacing-6 $spacing-8;
+}
+
+.hero__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 160px;
+}
+
+.hero__media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-6;
+    width: 100%;
+    max-width: 220px;
+}
+
+.hero__title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+}
+
+.hero__subtitle {
+    color: $color-text-muted;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+}
+
+.hero__btn {
+    align-self: flex-start;
+}
+
+// Homepage about banner
+.about {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 108px;
+}
+
+.about__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 179px;
+    padding-block: $spacing-8;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-6;
+    width: 100%;
+    max-width: 486px;
+    text-align: center;
+}
+
+.about__title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: $line-height-tight;
+    letter-spacing: 0.06em;
+}
+
+.about__text {
+    color: #847a78;
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+}
+
+.about__btn {
+    max-width: 310px;
+}
+
+// Contact page hero
+.hero--contact {
+    background-color: $color-secondary;
+}
+
+.hero--contact .hero__inner {
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-8;
+    height: 530px;
+    padding-block: 0;
+}
+
+// About page hero
+.hero--about {
+    background-color: $color-secondary;
+}
+
+.hero--about .hero__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 214px;
+    padding-block: 0;
+}
+
+.hero--about .hero__media {
+    max-width: 212px;
+}
+
+// Payment page hero
+.hero--payment {
+    background-color: $color-secondary;
+}
+
+.hero--payment .hero__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+    padding-block: 0;
+}
+
+.hero__inner--center {
+    align-items: center;
+    text-align: center;
+}
+
+.hero__media--center {
+    max-width: 100%;
+}
+
+.hero__title--center {
+    width: 100%;
+    max-width: 538px;
+    text-align: center;
+}
+
+// Contact page content
+.contact {
+    padding-block: $spacing-10 $spacing-16;
+}
+
+.contact__inner {
+    width: 100%;
+}
+
+.contact__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-10;
+}
+
+.contact__info {
+    width: 100%;
+    max-width: 385px;
+}
+
+.contact__info-header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-5;
+    margin-bottom: $spacing-6;
+}
+
+.contact__info-title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.contact__info-subtitle {
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: $font-size-xl;
+    line-height: $line-height-base;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact__detail img {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.contact__detail-text {
+    color: $color-primary;
+    font-family: $font-body;
+    font-size: $font-size-md;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+@include desktop {
+    .hero__inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-12;
+        min-height: 530px;
+        padding-block: $spacing-10;
+    }
+
+    .hero__media {
+        flex: 0 1 561px;
+        max-width: 561px;
+        max-height: 306px;
+        object-fit: contain;
+    }
+
+    .hero__content {
+        flex: 0 1 538px;
+        max-width: 538px;
+        gap: $spacing-16;
+    }
+
+    .hero__title {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+
+    .hero__subtitle {
+        max-width: 387px;
+        font-size: $font-size-xl;
+    }
+
+    .about__inner {
+        min-height: 418px;
+        padding-block: $spacing-16;
+    }
+
+    .about__content {
+        gap: 44px;
+    }
+
+    .about__title {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+
+    .about__text {
+        font-size: $font-size-xl;
+    }
+
+    .hero--contact .hero__inner,
+    .hero--payment .hero__inner,
+    .hero--about .hero__inner {
+        flex-direction: column;
+        justify-content: center;
+        height: 530px;
+        padding-block: 0;
+    }
+
+    .hero--contact .hero__media,
+    .hero--payment .hero__media,
+    .hero--about .hero__media {
+        max-width: 561px;
+    }
+
+    .hero--contact .hero__media {
+        max-width: 561px;
+    }
+
+    .hero--payment .hero__media {
+        max-width: 561px;
+    }
+
+    .hero--contact .hero__title {
+        font-size: $font-size-2xl;
+        letter-spacing: 0.08em;
+    }
+
+    .contact {
+        padding-block: $spacing-12 $spacing-20;
+    }
+
+    .contact__layout {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 56px;
+    }
+
+    .contact__info-title {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}

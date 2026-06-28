@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULE — კონტაქტი</title>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="158" height="86">
+            </a>
+
+            <nav class="header__nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="index.html" class="header__nav-link">მთავარი</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="menu.html" class="header__nav-link">მენიუ</a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--active">
+                        <a href="contact.html" class="header__nav-link">კონტაქტი</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="about.html" class="header__nav-link">ჩვენს შესახებ</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button
+                    type="button"
+                    class="header__burger"
+                    aria-label="მენიუ"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                    data-nav-toggle
+                >
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="header__action" aria-label="კალათა" data-cart-open>
+                    <img src="assets/icons/cart.svg" alt="" width="36" height="36">
+                </button>
+                <a href="sign-in.html" class="header__profile" data-auth-profile aria-label="პროფილი">
+                    <img src="assets/icons/profile.svg" alt="" width="36" height="36">
+                    <span class="header__profile-name" data-auth-profile-name hidden></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main contact-page">
+
+        <!-- Hero -->
+        <section class="hero hero--contact" aria-labelledby="contact-hero-title">
+            <div class="hero__inner container hero__inner--center">
+                <figure class="hero__media hero__media--center">
+                    <img
+                        src="assets/images/cinnamon-roll.png"
+                        alt="დარიჩინის ფუნთუშა"
+                        width="561"
+                        height="306"
+                    >
+                </figure>
+                <h1 id="contact-hero-title" class="hero__title hero__title--center">
+                    გასინჯე ჩვენი გემრიელობები
+                </h1>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" aria-labelledby="contact-info-title">
+            <div class="contact__inner container">
+                <div class="contact__layout">
+                    <aside class="contact__info">
+                        <header class="contact__info-header">
+                            <h2 id="contact-info-title" class="contact__info-title">დაგვეკონტაქტეთ</h2>
+                            <p class="contact__info-subtitle">დაგვიტოვეთ კითხვები ან კომენტარები</p>
+                        </header>
+
+                        <ul class="contact__details">
+                            <li class="contact__detail">
+                                <img src="assets/icons/location.svg" alt="" width="24" height="24">
+                                <address class="contact__detail-text">
+                                    1055 Arthur ave Elk Groot, 67. New Palmas South Carolina.
+                                </address>
+                            </li>
+                            <li class="contact__detail">
+                                <img src="assets/icons/phone.svg" alt="" width="24" height="24">
+                                <a href="tel:+1234678910899" class="contact__detail-text">+1 234 678 9108 99</a>
+                            </li>
+                            <li class="contact__detail">
+                                <img src="assets/icons/email.svg" alt="" width="26" height="26">
+                                <a href="mailto:Contact@moralizer.com" class="contact__detail-text">Contact@moralizer.com</a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <form class="contact__form" action="#" method="post">
+                        <div class="contact__form-row">
+                            <div class="form-field">
+                                <label for="contact-first-name" class="form-field__label">სახელი*</label>
+                                <input
+                                    type="text"
+                                    id="contact-first-name"
+                                    name="first-name"
+                                    class="form-field__input"
+                                    autocomplete="given-name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-last-name" class="form-field__label">გვარი*</label>
+                                <input
+                                    type="text"
+                                    id="contact-last-name"
+                                    name="last-name"
+                                    class="form-field__input"
+                                    autocomplete="family-name"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-email" class="form-field__label">ელექტრონული ფოსტა*</label>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                class="form-field__input"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-phone" class="form-field__label">ტელეფონის ნომერი*</label>
+                            <input
+                                type="tel"
+                                id="contact-phone"
+                                name="phone"
+                                class="form-field__input"
+                                autocomplete="tel"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-message" class="form-field__label">მესიჯი*</label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                class="form-field__input form-field__textarea"
+                                placeholder="დაგვიტოვე მესიჯი..."
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary contact__submit">გამოგზავნე მესიჯი</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <a href="index.html" class="footer__logo">
+                <img src="assets/images/logo.png" alt="BULE ლოგო" width="297" height="162">
+            </a>
+
+            <nav class="footer__nav" aria-label="ფუტერის ნავიგაცია">
+                <ul class="footer__nav-list">
+                    <li><a href="index.html" class="footer__nav-link">მთავარი</a></li>
+                    <li><a href="menu.html" class="footer__nav-link">მენიუ</a></li>
+                    <li><a href="about.html" class="footer__nav-link">ჩვენს შესახებ</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contact">
+                <h3 class="footer__heading">დაგვიკავშირდით</h3>
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/phone.svg" alt="" width="24" height="24">
+                        <a href="tel:571151312">571-15-13-12</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/email.svg" alt="" width="24" height="24">
+                        <a href="mailto:username">username</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <img src="assets/icons/location.svg" alt="" width="24" height="24">
+                        <span>username</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <h3 class="footer__heading">შემოგვიერთდით</h3>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <img src="assets/icons/facebook.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="assets/icons/tiktok.svg" alt="" width="32" height="32">
+                        <a href="#">username</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<!-- Cart drawer overlay -->
+<div class="cart-overlay" id="cart-overlay" hidden>
+    <div class="cart-overlay__backdrop" data-cart-close tabindex="-1" aria-hidden="true"></div>
+
+    <aside
+        class="cart-drawer"
+        id="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+        aria-hidden="true"
+    >
+        <header class="cart-drawer__header">
+            <div class="cart-drawer__heading">
+                <h2 id="cart-title" class="cart-drawer__title">თქვენი შეკვეთა</h2>
+            </div>
+            <button type="button" class="cart-drawer__close" data-cart-close aria-label="კალათის დახურვა">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </header>
+
+        <ul class="cart-drawer__items" id="cart-drawer-items"></ul>
+
+        <p class="cart-drawer__empty" id="cart-drawer-empty">კალათა ცარიელია</p>
+
+        <footer class="cart-drawer__footer">
+            <dl class="cart-total">
+                <div class="cart-total__row">
+                    <dt class="cart-total__label">სულ</dt>
+                    <dd class="cart-total__value" data-cart-subtotal>0₾</dd>
+                </div>
+                <div class="cart-total__row">
+                    <dt class="cart-total__label">მიტანა</dt>
+                    <dd class="cart-total__value" data-cart-delivery>0₾</dd>
+                </div>
+                <div class="cart-total__row cart-total__row--total">
+                    <dt class="cart-total__label">ჯამი</dt>
+                    <dd class="cart-total__value" data-cart-total>0₾</dd>
+                </div>
+            </dl>
+
+            <a
+                href="payment.html"
+                class="btn btn--primary cart-drawer__checkout"
+                data-cart-checkout
+                aria-disabled="true"
+            >
+                <img src="assets/icons/cart-btn.svg" alt="" width="22" height="21">
+                <span>განაგრძე</span>
+            </a>
+        </footer>
+    </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
